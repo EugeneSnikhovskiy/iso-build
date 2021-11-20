@@ -38,6 +38,11 @@ jobs:
         with:
           format: 'YY.MM'   
       -
+        name: Install Build-Dependencies
+        run: |
+          sudo pacman -Syy
+          yes | sudo pacman -S gparted
+      -
         name: image-build-upload
         uses: manjaro/manjaro-iso-action@v2.1
         with:
