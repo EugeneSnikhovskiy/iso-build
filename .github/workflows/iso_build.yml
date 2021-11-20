@@ -40,8 +40,8 @@ jobs:
       -
         name: Install Build-Dependencies
         run: |
-          sudo pacman -Syy
-          yes | sudo pacman -S gparted
+          sudo apt-get update
+          sudo apt-get install gparted
       -
         name: image-build-upload
         uses: manjaro/manjaro-iso-action@v2.1
